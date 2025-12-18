@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Image Generator - Flow",
+    "version": "1.0",
+    "description": "Quick image generation extension inspired by Google Flow",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+          "default_popup": "popup.html",
+          "default_title": "Image Generator"
+    },
+    "background": {
+          "service_worker": "background.js"
+    },
+    "host_permissions": [
+          "https://api.replicate.com/*"
+    ]
+}
