@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Generator</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+<body>
+    <div class="container">
+          <header>
+                  <h1>🎨 Image Generator</h1>
+                <a href="#" id="settingsBtn" class="settings-btn">⚙️</a>a>
+          </header>
+    
+        <div class="main-content">
+              <!-- Settings Panel (Hidden by default) -->
+              <div id="settingsPanel" class="settings-panel hidden">
+                      <h3>Settings</h3>
+                      <div class="setting-group">
+                                <label for="apiKey">Replicate API Key:</label>label>
+                                <input type="password" id="apiKey" placeholder="Enter your API key">
+                                <small><a href="https://replicate.com/account" target="_blank">Get API key</a>a></small>
+                      </div>div>
+                      <div class="setting-group">
+                                <label for="model">Model:</label>label>
+                                <select id="model">
+                                            <option value="stability-ai/stable-diffusion">Stable Diffusion 1.5</option>option>
+                                            <option value="stability-ai/sdxl">SDXL</option>option>
+                                </select>select>
+                      </div>div>
+                      <button id="saveSettings" class="btn btn-primary">Save Settings</button>button>
+              </div>div>
+        
+              <!-- Main Generator Panel -->
+              <div id="generatorPanel" class="generator-panel">
+                      <div class="form-group">
+                                <label for="prompt">Prompt:</label>label>
+                                <textarea id="prompt" placeholder="Describe your image..." rows="4"></textarea>
+                      </div>div>
+              
+                      <div class="controls-row">
+                                <div class="form-group">
+                                            <label for="aspectRatio">Aspect Ratio:</label>label>
+                                            <select id="aspectRatio">
+                                                          <option value="1:1">Square (1:1)</option>option>
+                                                          <option value="16:9">Landscape (16:9)</option>option>
+                                                          <option value="9:16">Portrait (9:16)</option>option>
+                                            </select>select>
+                                </div>div>
+                      
+                                <div class="form-group">
+                                            <label for="outputs">Outputs:</label>label>
+                                            <select id="outputs">
+                                                          <option value="1">1 Image</option>option>
+                                                          <option value="2">2 Images</option>option>
+                                                          <option value="3">3 Images</option>option>
+                                                          <option value="4" selected>4 Images</option>option>
+                                            </select>select>
+                                </div>div>
+                      </div>div>
+              
+                      <button id="generateBtn" class="btn btn-generate">
+                                <span>🚀 Generate</span>
+                      </button>button>
+              </div>div>
+        
+              <!-- Results Panel -->
+              <div id="resultsPanel" class="results-panel hidden">
+                      <div id="loading" class="loading hidden">
+                                <div class="spinner"></div>div>
+                                <p>Generating images...</p>
+                      </div>div>
+                      <div id="results" class="results-grid"></div>div>
+                      <button id="backBtn" class="btn btn-secondary">← Back</button>button>
+              </div>div>
+        </div>div>
+    </div>div>
+
+  <script src="popup.js"></script>
+</body>
+</html>html></p></span></small></h3></h1>
+          </header>
+</body></title>
+  </head>
